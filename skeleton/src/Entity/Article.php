@@ -29,6 +29,12 @@ class Article
      */
     private $body;
 
+    
+    /**
+     * @ORM\Column(type="text", length=500)
+     */
+    private $image;
+
     // Getters & Setters
     public function getId(): ?int {
         return $this->id;
@@ -48,5 +54,12 @@ class Article
 
     public function setBody($body) {
         $this->body = $body;
+    }
+    public function getImage() {
+        return $this->image;
+    }
+
+    public function setImage($image) {
+        $this->image = $image;
     }
 }
